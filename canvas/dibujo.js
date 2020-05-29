@@ -4,9 +4,15 @@ var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
 console.log(lienzo);
 
-lienzo.beginPath();
-lienzo.strokeStyle = "blue";
-lienzo.moveTo(50,10);
-lienzo.lineTo(250,2);
-lienzo.stroke();
-lienzo.closePath();
+function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
+{
+  lienzo.beginPath();
+  lienzo.strokeStyle = color;
+  lienzo.moveTo(xinicial,yinicial);
+  lienzo.lineTo(xfinal,yfinal);
+  lienzo.stroke();
+  lienzo.closePath();
+}
+
+dibujarLinea("pink",1,300,300,1);
+dibujarLinea("black",1,1,300,300);
